@@ -5,4 +5,4 @@ response=requests.get(url,headers={'user-agent':'Hello'}) #changing user agent b
 html=response.content
 soup=BeautifulSoup(html,'html.parser')
 a_tags=soup.find_all('a',class_="entry-title-link")
-content=list(map(lambda a:print(a),a_tags))
+content=list(map(lambda a:print(a.getText()),a_tags))
