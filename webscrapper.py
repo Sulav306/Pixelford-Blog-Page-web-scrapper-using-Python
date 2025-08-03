@@ -6,4 +6,4 @@ html=response.content
 soup=BeautifulSoup(html,'html.parser')
 a_tags=soup.find_all('a',class_="entry-title-link")
 for a in a_tags:
-    print(a)
+    print(a.getText())
